@@ -1,5 +1,7 @@
 <?php
-  require_once('db.php');
+  include $_SERVER['DOCUMENT_ROOT']."/advbbs/inc/db.php"; //절대 경로
+  
+  //('http://localhost/advbbs/inc/db.php');
   /*
   echo strlen('123abc');//6
   echo mb_strlen('123abc');//6
@@ -56,7 +58,7 @@
         ?>
         <tr>
           <td><?=$row['idx']?></td>
-          <td><a href=""><?=$title?></a></td>
+          <td><a href="page/board/read.php?idx=<?=$row['idx']?>"><?=$title?></a></td>
           <td><?=$row['name']?></td>
           <td><?=$row['date']?></td>
           <td><?=$row['hit']?></td>
@@ -69,7 +71,7 @@
       </tbody>
     </table>
     <div class="links">
-      <a href="">글쓰기</a>
+      <a href="./page/board/write.php">글쓰기</a>
     </div>
   </div>
   <?php
