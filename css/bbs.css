@@ -35,3 +35,25 @@ table thead th {
 .form .field input, .form .field textarea{
   flex: 1;
 }
+.jcs {
+  justify-content: start;
+}
+.form .jcs label {width: 100px;}
+.form .jcs input {flex: none;}
+
+#pass_confirm {
+position: fixed;
+left: 50%; top: 30%; transform: translate(-50%,-50%);
+width: 300px;
+padding: 50px 80px;
+background: #fff;
+border:1px solid #ccc;
+box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.reply {background: #ebebeb; margin-bottom: 10px; padding: 10px;}
+.reply_form input,
+.reply_form textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}

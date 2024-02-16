@@ -6,8 +6,15 @@
   $content = $_POST['content'];
   $date = date("Y-m-d");
 
+  #비밀글
+  if(isset($_POST['lock'])){
+    $lock_post =1;
+  } else{
+    $lock_post =0;
+  }
+
   //$sql = //board 테이블에 저장하는 sql 문장
-  $sql = "INSERT INTO board (name,pw,title,content,date) values ('{$username}','{$userpw}','{$title}','{$content}','{$date}')";
+  $sql = "INSERT INTO board (name,pw,title,content,date,lock_post) values ('{$username}','{$userpw}','{$title}','{$content}','{$date}',{$lock_post})";
 
   if($mysqli->query($sql) === true){
     echo "<script>
