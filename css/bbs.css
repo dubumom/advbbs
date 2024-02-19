@@ -57,3 +57,8 @@ box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   display: block;
   margin-bottom: 10px;
 }
+.edit_dialog form input,
+.edit_dialog form textarea {
+  width: 100%;
+  display: block;
+}

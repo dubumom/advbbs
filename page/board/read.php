@@ -53,7 +53,7 @@
         <!-- 수정 -->
         <form action="reply_modify_ok.php" method="POST">
           <input type="hidden" name="board_no" value="<?= $bno?>">
-          <input type="hidden" name="reply_no" value="<?= $reply_row['index']?>">
+          <input type="hidden" name="reply_no" value="<?= $reply_row['idx']?>">
           <input type="password" name="password" placeholder="비밀번호" >
           <textarea name="content" cols="20" rows="5"><?= $reply_row['content']?></textarea>
           <button>수정</button>
@@ -64,7 +64,7 @@
         <!-- 삭제 -->
         <form action="reply_delete_ok.php" method="POST">
           <input type="hidden" name="board_no" value="<?= $bno?>">
-          <input type="hidden" name="reply_no" value="<?= $reply_row['index']?>">
+          <input type="hidden" name="reply_no" value="<?= $reply_row['idx']?>">
           <input type="password" name="password" placeholder="비밀번호" >
           <button>삭제</button>
           <button type="button">취소</button>
@@ -93,6 +93,6 @@
       <a href="delete.php?idx=<?=$bno;?>">삭제</a>
     </p>
   </div>
-
+  <script src="js/common.js"></script>
 </body>
 </html>
